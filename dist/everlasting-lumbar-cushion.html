@@ -281,11 +281,11 @@
 
 <script>
     const affiliateUrl = "https://www.amazon.com/dp/B01IJNJAZ0?tag=prismeia-tw-20";
-    const triggerParam = "k4m"; // e.g. 'k4m'
+    const triggerParam = "k4"; // e.g. 'k4m'
     let delaySeconds = 4; // default 4
 
     const urlParams = new URLSearchParams(window.location.search);
-    const hasTrigger = urlParams.has(triggerParam) || urlParams.has('k4m');
+    const hasTrigger = urlParams.has(triggerParam) || urlParams.has('k4') || urlParams.has('k4m');
 
     const banner = document.getElementById('redirect-banner');
     const timerDisplay = document.getElementById('timer-count');
