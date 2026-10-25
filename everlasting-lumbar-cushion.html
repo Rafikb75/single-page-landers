@@ -131,6 +131,163 @@
             border-radius: 8px;
             background: #ffffff;
             padding: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .product-visual img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Animated Trend Ribbon & Glowing Star Ticker */
+        @keyframes starGlow {
+            0% { transform: scale(1); filter: drop-shadow(0 0 2px #f59e0b); }
+            50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #f59e0b); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 2px #f59e0b); }
+        }
+
+        @keyframes badgePulse {
+            0% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+            100% { opacity: 0.9; transform: scale(1); }
+        }
+
+        .trend-ribbon-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 12px 0 10px 0;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+
+        .trend-badge-choice {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .choice-tag {
+            background: #232f3e;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border-left: 3px solid #f08804;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .choice-accent {
+            color: #f08804;
+        }
+
+        .trend-tag {
+            background: linear-gradient(90deg, #dc2626 0%, #ea580c 100%);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: badgePulse 2s infinite ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .shimmer-stars-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .animated-stars {
+            color: #f59e0b;
+            font-size: 18px;
+            letter-spacing: 2px;
+            display: inline-block;
+            animation: starGlow 2s infinite ease-in-out;
+        }
+
+        .rating-text {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        /* Prime Exclusive Promo Enticement Box */
+        .prime-promo-banner {
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+            border: 1.5px solid #38bdf8;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin: 12px 0 16px 0;
+            text-align: left;
+            box-shadow: 0 3px 10px rgba(56, 189, 248, 0.12);
+        }
+
+        .prime-logo-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .prime-check {
+            color: #00a8e1;
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .prime-word {
+            color: #00a8e1;
+            font-family: Arial, sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        .prime-exclusive {
+            background: #0284c7;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .prime-perks {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .perk-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .prime-urgency-pill {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-align: center;
         }
 
         .prime-badge {
@@ -248,8 +405,33 @@
             <a href="https://www.amazon.com/dp/B01IJNJAZ0?tag=prismeia-tw-20" id="product-img-link">
                 <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80" alt="Everlasting Comfort Memory Foam Lumbar Support Pillow">
             </a>
-            <div>
-                <span class="prime-badge">✓ Prime Fast 2-Day US Shipping</span>
+
+            <!-- Animated Trend Ribbon & Glowing Star Ticker -->
+            <div class="trend-ribbon-bar">
+                <div class="trend-badge-choice">
+                    <span class="choice-tag">Amazon's <span class="choice-accent">Choice</span></span>
+                    <span class="trend-tag">🔥 Viral Trend #1</span>
+                </div>
+                <div class="shimmer-stars-box">
+                    <span class="animated-stars">★★★★★</span>
+                    <span class="rating-text"><strong>4.6 / 5.0</strong> (40,000+ Reviews)</span>
+                </div>
+            </div>
+
+            <!-- Prime Exclusive Promo Enticement Box -->
+            <div class="prime-promo-banner">
+                <div class="prime-logo-badge">
+                    <span class="prime-check">✓</span><span class="prime-word">prime</span>
+                    <span class="prime-exclusive">Exclusive Member Promo</span>
+                </div>
+                <div class="prime-perks">
+                    <div class="perk-item"><span class="perk-icon">📦</span> <span><strong>FREE 2-Day & Same-Day US Shipping</strong> for Prime Members</span></div>
+                    <div class="perk-item"><span class="perk-icon">🏷️</span> <span><strong>Instant Clip Coupon:</strong> Save extra at Amazon checkout today</span></div>
+                    <div class="perk-item"><span class="perk-icon">🛡️</span> <span><strong>Amazon Prime Buyer Protection</strong> • 30-Day Hassle-Free Returns</span></div>
+                </div>
+                <div class="prime-urgency-pill">
+                    ⚡ <strong>High Demand:</strong> Over 1,800+ Americans ordered this week • Prime Stock Reserved
+                </div>
             </div>
         </div>
 
