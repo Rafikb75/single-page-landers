@@ -2,6 +2,6 @@
   "name": "single-page-landers",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Static Presell Landers ready'"
+    "build": "mkdir -p dist && cp *.html dist/ 2>/dev/null || true"
   }
 }
